@@ -1,0 +1,53 @@
+<!-- ตอนที่ 10 การลิงค์อีเวนต์กับฟอร์มและการตรวจสอบฟอร์ม -->
+- vallidateForm การตรวจสอบ
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--อันดับที่ 4 เพิ่ม id-->
+    <div class="jumbotron">
+        <h1 id="heading">Learn JavaScript is Awesome!!!</h1>
+        <h2>By Asmat</h2>
+    </div>
+<!-- อันดับแรก สร้าง return validateForm -->
+    <form style="text-align: center;" onsubmit="return validateForm()" 
+    action="something.php" name="myForm" method="post">
+        <fieldset>
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+           
+            <br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+    <script>
+// อันดับที่สองสร้างฟังก์ชั่น
+        function validateForm() {
+            var firstName = document.forms["myForm"]["firstName"].value;
+            //ถ้ามันเป็นค่าว่าง ก็จะขึ้นอาร์เลิท เตือนให้ป้อนก่อน
+            if (firstName == null || firstName == "") {
+                alert("First name is required!");
+                return false;
+            }
+            //ต้องป้อนให้มากกว่า 3 ตัว
+            if (firstName.length < 3) {
+                alert("First name be at least 3 chars");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

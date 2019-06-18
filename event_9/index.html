@@ -1,0 +1,70 @@
+<!-- ตอนที่ 9 รู้จักกับอีเวนต์และการใช้งาน -->
+อีเวนท์ คือ การ interactive ตอบสนองกับผู้ใช้ และ dinamic
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head><body>
+    <div class="jumbotron">
+        <!-- <h1>Learn JavaScript is Awesome!!!</h1> -->
+        <h1 id="heading">Learn JavaScript is Awesome!!!</h1>
+        <h2>By Asmat</h2>
+    </div>
+<!-- basic event -->
+<!-- การแสดง อาเลิท เมื่อคลิ๊ก -->
+    <button onclick="doClick()">Click me</button>
+<!-- คลิ๊กแสดงเวลา -->
+    <h1 id="time"></h1>
+    <button onclick="showDate()">Click me</button> -->
+
+<!-- ชี้แสดงเวลา -->
+    <button onmouseover="showDate()" onmouseout="clearDate()">Click me</button>
+    <h1 id="time"></h1>
+<!-- ------------------------------------------------------------ -->
+<!-- เมื่อเราคลิ๊กให้ข้อความในปุ่มเปลี่ยน -->
+    <!-- วิธีที่ 1 innerHTML จาวาสคริปต์คอฟังก์ชั่นนี้คนไม่ค่อยนิยมใช้-->
+    <button onclick="this.innerHTML= 'You Clicked!'">Click me</button>
+    <!-- วิธีที่ 2 เปลี่ยนข้อความแบบมือโปร -->
+    <button onclick="changeText(this)">Click me</button>
+<!-- -------------------------------------------------------- -->
+<!-- เปลี่ยนหัวข้อ -->
+    <button onclick="changeText()">Click me</button>
+    
+    <script> 
+//การแสดง อาเลิท เมื่อคลิ๊ก
+        function doClick() {
+            alert('You Clicked!');
+        }
+// -----------------------------------------------------------
+// ฟังก์ชั่นวิธีที่ 2 เป็นข้อความในปุ่ม
+        function changeText(id) {
+            id.innerHTML = 'You Clicked!';
+        }
+// -----------------------------------------------------------
+// คลิ๊กเปลี่ยนหัวข้อ h1
+        function changeText() {
+            var heading = document.getElementById('heading');
+            heading.innerHTML = 'I am Asmat Saleah';
+        }
+// ------------------------------------------------------------
+// คลิ๊กให้แสดงเวลา (เดี่ยวๆ)
+        function showDate() {
+           var time = document.getElementById('time');
+           time.innerHTML = Date();
+        }
+// ชี้ให้แสดงเวลา (ต้องโชว์ก่อนถึงจะเครียร์ได้ ต้อง 2 ฟังก์ชั่น )
+        function clearDate() {
+            var time = document.getElementById('time');
+            time.innerHTML = '';
+        }
+    </script>
+</body>
+</html>

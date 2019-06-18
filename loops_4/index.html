@@ -1,0 +1,35 @@
+<!-- ตอนที่ 4 รู้จักกับลูปและการใช้ (For Loop, While Loop, forEach) -->
+- ลูปค่าซ้ำๆ การดึงค่าจากอาร์เรย์มาแสดงผลโดยการลูป
+- เอาผลลัพธ์จาก Database มาแสดง โดยการใช้ลูป
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+        // Console.log จะแสดงที่ ตรวจสอบ หรือ กด F12
+    // For Loop 
+        for(var i = 0; i <= 10; i++) {
+            console.log(i);// 0-10
+        }   
+    // While Loop 
+        var i = 0;
+        while(i < 10) {
+            console.log(i);//0-9
+            i++
+        }
+    // ForEach Loop เรียงต
+        var numbers = [33,25,15,54,65];
+        numbers.forEach(function(number) {
+            console.log(number);//33,25,15,54,65
+        });
+    // For loop ในอาร์เรย์
+        var numbers = [33, 25, 15, 54, 65];
+        for(var i=0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+    // Add Method
+        var numbers = [33, 25, 15, 54, 65];
+        numbers.reverse(); //ค่ากลับกัน
+        for (var i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+    </script>
+</body>
+</html>

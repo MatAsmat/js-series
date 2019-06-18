@@ -1,0 +1,39 @@
+<!-- ตอนที่ 3 รู้จักกับอาร์เรย์และการใช้เมธอด .push(), .sort(), .reverse() -->
+Array = เป็นตัวที่ใช้ในเก็บค่าหลายๆค่าไว้ในตัวแปรตัวเดียว
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+        var color = []; // blank array ค่าอาร์เรย์ว่า
+    // วิธีที 1
+        var colors = ['red','blue','green'];//ค่า index เริ่มนับจากศูนย์
+        alert(colors[1]);
+    // วิธีที 2
+        var colors = new Array('red','blue','green');
+    // วิธีที 3
+        var colors = new Array();
+            colors[0] = 'red';
+            colors[1] = 'blue';
+            colors[2] = 'green';
+        alert(colors[2]);
+    // Add ค่าเพิ่มใน Array (แต่เป็นวืธีที่ไม่ดีเท่าไร เพราะไม่รู้ว่ามีกี่ตัว)
+        var colors = new Array('red', 'blue', 'green');
+            colors[3] =  'orange'; 
+        alert(colors);   
+    // Method .push() การเพิ่ม
+        var colors = new Array('red', 'blue', 'green');
+            colors.push('purple');//method
+        alert(colors[3]);
+    // การบวกเลขในอาร์เรย์
+        var numbers = [5, 77, 6, 43];
+        alert(numbers[0] + numbers[2]);
+    // การนับค่าในอาร์เรย์
+        var numbers = [5, 77, 6, 43];
+        alert(numbers.length);//property
+    // Method .sort() การสลับ
+        var numbers = [5, 77, 6, 43, 1, 33]; 
+        alert(numbers.sort()); //1,33,43,5,6,77  ตัวเลขที่น้อยที่สุดจะอยู่หน้า
+    // Method reverse.() การเรียง
+        var numbers = [5, 77, 6, 43, 1, 33];
+        alert(numbers.reverse()); //33,1,43,6,77,5  เรียงจากหลังไปหน้ากลับกัน
+    </script>
+</body>
+</html>

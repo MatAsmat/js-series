@@ -1,0 +1,33 @@
+<!-- ตอนที่ 7 รู้จักกับอ็อปเจ็คแบบริเทอรอล -->
+ออปเจคเพรียวๆ
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+        var person = { //object , porperty, value
+            firstName: 'Asmat',
+            lastName: 'Saleah',
+            age: 23,
+//แบบอาร์เรย์
+            car: ['Almera', 'Moove'], 
+//การเขียนออบเจคไว้ในออบเจ็ค หรือ เอมเบต ออบเจค
+            address: { 
+                street: '123 Something st',
+                city: 'Bangkok',
+                state: 'TH'
+            },
+//แบบฟังก์ชั่น
+        fullname: function() {
+            // return person.firstName สามารถเขียนแบบนี้ได้แต่คนไม่นิยมกัน
+            //this คือตัว person หรือที่เรียกว่า object
+            return this.firstName + " " + this.lastName;
+            }
+        }
+//การเข้าถึง porperty คือ .จุด
+        console.log(person.firstName);
+        console.log(person.car);
+        console.log(person.car[1]);
+        console.log(person.address.street);
+        console.log(person.fullname());
+    </script>
+</body>
+</html>

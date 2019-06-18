@@ -1,0 +1,29 @@
+<!-- ตอนที่ 6 รู้จักกับฟังก์ชั่นและการใช้งาน -->
+function คือ โค้ดที่ทำงานไว้เฉพาะส่วน เอาไว้ทำงานซ้ำๆ 
+             เป็นโปรแกรมเรียกใช้ มันจะทำงานตอนที่เรียกใช้แค่นั้น
+function จะมี ไม่รีเทิร์น กับ รีเทิร์นค่า
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+        function myFunction() {//parameter ในวงเล็บ
+            document.write('Asmat Saleah');
+        } 
+        myFunction();
+    // ไม่ return
+        function myCall(num1, num2) { //พารามีเตอร์ตัวรับค่า
+            var result = num1 + num2;
+            console.log(result);
+        }
+        myCall(5, 3); //ค่าอากีเมนท์ที่ส่งไป
+    // return
+        function myCall(num1, num2) { //พารามีเตอร์ตัวรับค่า
+            return num1 * num2;
+        }
+        console.log(myCall(5, 4));
+    //  ------------------
+        function myName(fname, lname) {
+            return 'Hi, my name is '+ fname + ' ' + lname;
+        }
+        console.log(myName('Asmat','Saleah'));
+    </script>
+</body>
+</html> 

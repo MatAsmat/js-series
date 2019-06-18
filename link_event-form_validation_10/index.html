@@ -1,0 +1,61 @@
+<!-- ตอนที่ 10 การลิงค์อีเวนต์กับฟอร์มและการตรวจสอบฟอร์ม -->
+โปรแกรมเปลี่ยนสีพื้นหลัง, สีตัวอักษร
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="body"> <!--อันดับที่ 4 เพิ่ม id-->
+    <div class="jumbotron">
+        <h1 id="heading">Learn JavaScript is Awesome!!!</h1>
+        <h2>By Asmat</h2>
+    </div>
+
+    <form style="text-align: center;" action="something.php" 
+    name="myForm" method="post">
+        <fieldset>
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <br>
+            <div>
+                <label>Background</label>
+<!-- อันดับแรก สร้าง event onchange-->
+            <select name="background" id="background" onchange="changeBG(this)">
+                <option value="red">RED</option>
+                <option value="blue">BLUE</option>
+                <option value="green">GREEN</option>
+            </select>
+            </div>
+        <br>
+        <input type="submit" value="submit">
+        </fieldset>
+    </form>
+    <script>
+// อันดับที่ 2 สร้าง function
+    // parameter x จะอ้างถึง this ที่อันดับแรก x จะหมายถึง Select ทั้งหมด
+        function changeBG(x) {
+            console.log(x.value);//อันดับที่ 3 เพิ่ม .value
+            var body = document.getElementById('body'); //อันดับที่ 5
+            body.style.backgroundColor = x.value;
+        }
+// เปลี่ยนสี Font 
+        function changeBG(x) {
+            console.log(x.value);
+            var heading = document.getElementById('heading'); 
+            heading.style.color = x.value;
+        }
+    </script>
+
+    
+</body>
+</html>

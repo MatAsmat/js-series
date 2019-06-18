@@ -1,0 +1,78 @@
+<!-- ตอนที่ 1 พื้นฐานภาษาจาวาสคริปต์-JavaScirpt [Fundamentals] -->
+What is JavaScript?
+    - ถูกสร้างขึ้นโดยบริษัท Netscape และเคยถูกเรียกใช้ ECMAscript
+    - เป็นภาษาสคริปต์หลักที่ใช้กับเว็บ ทุกเว็บไซต์ต้องมีจาวาสคริปต์ เป็นภาษาที่สำคัญมาก
+    - ทำงานในฝั่งClient=ผู้ใช้ ทำการInteractive=โต้ตอบ การhover animationต่างๆ
+      ปัจจุบันมีNodejs ทำให้ Js ทำงานได้ทั้งฝั่ง Client และ Server
+    - JavaScript ไม่ใช่ Java    
+What can JavaScript do?
+    - HTML Form Validation
+    - Event Handling - click, hover, etc...
+    - Powers HTML5 Features
+    - Search and form autocomplete
+    - Animations
+    - jQuery, Ajax, and other libraries are all JavaScript
+Writing javascript in html 
+    -   file เดียวกัน , ต่าง file กัน
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <script>
+        // inline javascirpt gose here 
+    </script>
+</head>
+<body>
+        <!-- External link  -->
+    <script type="text/javascript" src="myscript,js"></script>
+</body>
+</html>
+๋JavaScript Variables
+    - Variables should start with letter = เริ่มด้วยตัวอักษร เล็ก, ใหญ่ก็ได้
+    - They are case sensitive = ตัวเล็ก,ตัวใหญ่ ต่างกัน
+    - var x; =  การประกาศตัวแปร x เปล่า ไม่มีค่าอะไรในตัว x
+    - x = 4; = การประการตัวแปร x มีค่า = 4 ไม่ต้องมี var นำหน้าก็ได้
+    - var x = 4; = แต่เพื่อความมั่นใจ ใส่ var นำหน้าดีกว่า
+JavaScript Arrays = เก็บค่าได้หลายตัว
+    <script>
+        // รูปแบบที่ 1
+        var cars = new Array();
+            cars[0] = "Honda";
+            cars[1] = "Toyota";
+            cars[2] = "Ford";
+        // รูปแบบที่ 2
+        var car = new Array("Honda","Toyota","Ford");
+    </script>
+JavaScript Loops = การรันโค้ดเดิมซ้ำๆ จนกว่าจะเข้าเงื่อนไขที่ถูกต้อง
+    - For loop = จะลูปผ่านบล๊อคตัวเลขทุกตัว แล้วเราจะรู้มันกี่ตัวๆ
+    <script>
+        for (var i = 0; i < 5; i++) {
+            document.write( "number" + i + "<br>");
+        }
+    </script>
+    - While Loop = ลูปแค่ที่เป็นเงื่อนไขเป็นจริง ทำงานก่อนแล้วมารู้ทีหลัง
+    <script>
+        var i = 0;
+        while ( i < 5 ) {
+            document.write( "number" + i + "<br>" );
+            i++;
+        }
+    </script>
+    - For in loop = ลูปผ่านอาร์เรย์
+๋JavaScript Functions
+    - ฟังค์ชั่นจะทำงานก็ต้อเมื่อถูกเรียกใช้
+    <script>
+        // Create a Function
+        function myFunction() {
+            document.write( "This is my funtion.." );
+        }
+        // Call a Function
+        myFunction();
+    </script>    
+๋JavaScript Objects
+    - ทุกสิ่งทุกอย่างใน JavaScipt จะเป็น Object หมดเลย
+      เช่น String, Date, Array
+    - Object แต่ละตัวก็จะมี Properties สามารถเข้าถึงแบบนี้
+      objectName.propertyName
+      <script>
+          var greeting = "Hello";
+          var x = greeting.length; // Object.Property
+        //   สร้างตัวแปร x เก็บค่าความยาวของตัวอักษร
+      </script>

@@ -1,0 +1,52 @@
+<!-- ตอนที่ 5 การใช้เงื่อนไข If statements, If else, Swiches -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+    //1 = 1 => การแอคทรายค่า คือ 1 ไปเก็บใน 1 ก็เหมือนการสร้างตัวแปร
+    //1 == 1 => ค่าเปรียบเทียบ
+    //1 === 1 => การเปรียบเทียบชนิดของข้อมูล เช่น 1 = 1 เป็นจริง
+    //1 === '1' => การเปรียบเทียบชนิดของข้อมูล'1'เป็นสตริง จะไม่เป็นจริง
+//  If statements
+        if( 1 == 1 ) {
+            console.log('This is true');
+        }    
+    // ----------------------
+//  If else
+        if (1 == 2) {
+            console.log('This is true');
+        } else {
+            console.log('This is false'); // ไม่เป็นจริง
+        }   
+    // ----------------------
+        var num1 = 3;
+        var num2 = 4;
+        if (num1 == num2) {
+            console.log('This is true');
+        } else {
+            console.log('This is false');
+        }
+    // ---------------------
+        var num1 = 3;
+        var num2 = 4;
+        if (num1 == num2 && num1 == 3) { 
+            console.log('This is true'); // || หรือ จะเป็นจริง
+        } else {
+            console.log('This is false'); // && และ จะไม่เป็นจริง
+        }
+// Swiches statement
+        var fruit ='apple';
+            switch(fruit) {
+                case 'banana':
+                    alert('I hate banana');
+                    break;
+                case 'apple':
+                    alert('I love apple');
+                    break;
+                case 'orange':
+                    alert('orange is ok');
+                    break;
+                default:
+                    alert('I love all other fruit');
+            }
+    </script>
+</body>
+</html>

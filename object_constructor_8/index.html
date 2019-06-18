@@ -1,0 +1,51 @@
+<!-- ตอนที่ 8 รู้จักกับอ็อบเจ็คแบบคอนสตรักเตอร์ -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head><body>
+    <script>
+        var apple = new Object();
+            apple.color = 'red';
+            apple.shape = 'round';
+// ------------------
+//แบบที่ 1 เมื่อจะมีการเพิ่มผลไม้อีก ก็ต้องเขียนโค้ดใหม่ทั้งหมด
+            apple.descripe = function() {
+                return 'An apple is the color ' + this.color + 
+                ' and is the shape ' + this.shape;
+            }
+            console.log(apple.shape); 
+            console.log(apple.descripe());
+// -----------------
+//การแก้ แบบที่ 2 คอนสตรักเตอร์แพทเทินท์
+            function Fruits(name, color, shape) {
+                this.name  = name;
+                this.color = color;
+                this.shape = shape;
+
+                this.descripe = function() {
+                    return 'A ' + this.name + 'is the color ' + this.color +
+                    ' is the shape ' + this.shape;
+                }
+            }
+            var apple = new Fruits('apple', 'red', 'round');
+            // การเพิ่ม
+            var melon = new Fruits('melon', 'green', 'round');
+            console.log(apple);
+            console.log(melon.descripe()); //เรียกใช้แบบฟังก์ชัน
+// -----------------------
+// ใช้อาร์เรย์ทำเป็นออบเจคได้ 
+            var users = [
+                {
+                    name: 'Abdulbasit Saleah',
+                    age: 25
+                }, 
+                {
+                    name: 'Asmat Saleah',
+                    age: 23
+                }, 
+                {
+                    name: 'Husna Saleah',
+                    age: 17
+                }
+            ];
+            console.log(users[1]);
+    </script>
+</body>
+</html>
